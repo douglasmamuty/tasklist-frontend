@@ -1,0 +1,3 @@
+.list-items li div button + button{
+    margin-left: 10px;
+}

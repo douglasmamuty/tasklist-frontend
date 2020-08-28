@@ -1,0 +1,7 @@
+body{
+    background: #f5f5f5;
+}
+
+body, input, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
