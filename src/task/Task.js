@@ -37,9 +37,9 @@ function Task({history, match}) {
         history.push('/');        
     };    
 
-    useEffect(()=> {        
+    useEffect(()=> {
         async function fetchTask(){
-            if(match.params.id !== 0){
+            if(match.params.id !== '0'){
                 const response = await api.get(`/task/${match.params.id}`);
                 setTitle(response.data.title);
                 setDescription(response.data.description);
@@ -68,8 +68,8 @@ function Task({history, match}) {
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Descrição</Form.Label>
                         <Form.Control 
-                            as="textarea" 
-                            row="3" 
+                            as="textarea"
+                            rows="3"
                             placeholder="Descrição da Tarefa"
                             value={description}
                             onChange={e => setDescription(e.target.value)}

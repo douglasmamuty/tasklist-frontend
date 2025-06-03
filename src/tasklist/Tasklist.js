@@ -60,18 +60,19 @@ function Tasklist({ history }) {
 												<p><strong>Descrição:</strong>&nbsp;{task.description}</p>
 											</Col>
 											<Col className="actions">
-												<Button  
-													title="Concluir" 
-													variant="outline-success"
-													onClick={() => { 
-														if(task.state){
-															if (window.confirm('Deseja desmarcar está tarefa?')){
-																handleDoneTask(task._id, task.state)
-															}
-														}
-														handleDoneTask(task._id, task.state);
-													}}
-												>
+                                        <Button
+                                                title="Concluir"
+                                                variant="outline-success"
+                                                onClick={() => {
+                                                        if (task.state) {
+                                                                if (window.confirm('Deseja desmarcar está tarefa?')) {
+                                                                        handleDoneTask(task._id, task.state);
+                                                                }
+                                                        } else {
+                                                                handleDoneTask(task._id, task.state);
+                                                        }
+                                                }}
+                                        >
 													<FontAwesomeIcon icon={faCheckDouble} />
 												</Button>
 												<Button  
